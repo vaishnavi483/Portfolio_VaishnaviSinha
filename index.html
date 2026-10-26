@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaishnavi Sinha — Portfolio</title>
+  
+  <!-- Typography: Vidaloka & Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Vidaloka&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Background Particle Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="#" class="nav-brand">&lt;VS /&gt;</a>
+    <nav class="nav-links">
+      <a href="#about" class="nav-item"><span class="nav-num">01.</span> About</a>
+      <a href="#skills" class="nav-item"><span class="nav-num">02.</span> Skills</a>
+      <a href="#projects" class="nav-item"><span class="nav-num">03.</span> Projects</a>
+      <a href="#contact" class="nav-item"><span class="nav-num">04.</span> Contact</a>
+    </nav>
+    <button class="terminal-trigger-btn" id="terminal-open-btn">
+      <span class="terminal-icon">&gt;_</span> CLI
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span>Available for SDE / AI Internships</span>
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Vaishnavi Sinha</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          I build <span id="typewriter"></span><span class="cursor-blink">|</span>
+        </h2>
+        <p class="hero-description
