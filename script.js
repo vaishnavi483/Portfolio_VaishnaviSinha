@@ -153,31 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (aboutSection) observer.observe(aboutSection);
   }
 
-  /* --- 5. Project Category Filtering --- */
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterValue = btn.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filterValue === 'all' || category === filterValue) {
-          card.style.display = 'flex';
-          card.style.opacity = '0';
-          setTimeout(() => { card.style.opacity = '1'; }, 50);
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  /* --- 6. CLI Terminal Logic --- */
+  /* --- 5. CLI Terminal Logic --- */
   const terminalModal = document.getElementById('terminal-modal');
   const terminalOpenBtn = document.getElementById('terminal-open-btn');
   const terminalCloseBtn = document.getElementById('terminal-close-btn');
@@ -215,8 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
             responseLine.innerHTML = `Available commands:<br>
               - <span class="highlight-cmd">about</span> : Display biography<br>
               - <span class="highlight-cmd">skills</span> : List tech stack<br>
-              - <span class="highlight-cmd">projects</span> : View engineering works<br>
-              - <span class="highlight-cmd">contact</span> : Show contact info<br>
+                            - <span class="highlight-cmd">contact</span> : Show contact info<br>
               - <span class="highlight-cmd">clear</span> : Clear terminal screen<br>
               - <span class="highlight-cmd">exit</span> : Close CLI window`;
             break;
@@ -225,11 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             break;
           case 'skills':
             responseLine.innerHTML = "Stack: C++, JavaScript (ES6+), HTML5, CSS3 Glassmorphic UI, Git, OOP & Data Structures.";
-            break;
-          case 'projects':
-            responseLine.innerHTML = "1. WebDev Bookstore Platform<br>2. Interactive Task Tracker<br>3. E2B Business Architecture Dashboard";
-            break;
-          case 'contact':
+            break;          case 'contact':
             responseLine.innerHTML = "Use the transmission form below or navigate to #contact section.";
             break;
           case 'clear':
@@ -251,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* --- 7. Interactive Form Handler --- */
+  /* --- 6. Interactive Form Handler --- */
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
